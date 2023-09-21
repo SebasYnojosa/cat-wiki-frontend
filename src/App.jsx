@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Container from './Container';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import CatPage from './CatPage';
 import MostSearched from "./MostSearched";
 
@@ -11,7 +12,7 @@ function App() {
 
   return (
  
-    <Router basename={"https://cat-wiki-zlzc.onrender.com/"}>
+    <Router>
       <Routes>
         <Route path="/" element={<Container />} />
         <Route path="/cat/:catName" element={<CatPage />} />
