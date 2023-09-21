@@ -11,7 +11,7 @@ function App() {
 
   return (
  
-    <Router>
+    <Router basename={"https://cat-wiki-zlzc.onrender.com/"}>
       <Routes>
         <Route path="/" element={<Container />} />
         <Route path="/cat/:catName" element={<CatPage />} />
