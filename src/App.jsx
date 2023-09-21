@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Container />} />
         <Route path="/cat/:catName" element={<CatPage />} />
-        <Route path="/most_searched" element={<MostSearched/>}/>
+        <Route path="/most_searched/" element={<MostSearched/>}/>
       </Routes>
     </Router>
 
