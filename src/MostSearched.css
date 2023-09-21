@@ -1,0 +1,288 @@
+.most-searched-container {
+    display: grid;
+    grid-template-columns: 22% 78%;
+    height: 5vh;
+}
+
+.most-searched-container p {
+
+    text-align: left;
+    color:  #291507;
+}
+
+.most-searched-container a h2 {
+    color:  #213547;
+}
+
+#container-most-searched {
+    grid-template-rows: 100%;
+    min-height: 3080px;
+
+}
+
+.m-searched-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.searched {
+    width: 200px;
+    height: 200px;
+
+}
+
+.most-searched-container h2 {
+    text-align: left;
+}
+
+.most-searched-text-container {
+    width: 95%;
+}
+
+#container-1-most-searched {
+    grid-template-rows: 3% 94% 3%;
+}
+
+.most-searched-text-container,   a {
+    color: #213547;
+}
+
+
+@media(max-width: 1200px) {
+    .searched {
+        width: 180px;
+        height: 180px;
+    }
+
+    .most-searched-container p {
+        font-size: 0.9rem;
+    }
+}
+
+@media(max-width: 1000px) {
+    .searched {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media(max-width: 950px) {
+    .searched {
+        height: 160px;
+        width: 160px;
+    }
+
+    .most-searched-container p {
+        font-size: 0.8rem;
+    }
+    .most-searched-container h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width: 850px) {
+    .searched {
+        height: 150px;
+        width: 150px;
+    }
+
+    .most-searched-container p {
+        font-size: 0.8rem;
+    }
+    .most-searched-container h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+@media(max-width: 950px) {
+    .searched {
+        height: 150px;
+        width: 150px;
+    }
+
+    .most-searched-container p {
+        font-size: 0.7rem;
+    }
+    .most-searched-container h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 768px) {
+
+    .m-searched-container {
+
+        justify-content: space-around;
+        height: 95%;
+        margin-top: -5%;
+
+    }
+ .searched, .searched img {
+    height: 150px;
+    width: 150px;
+    margin-top: 0;
+ }
+
+ #container-1-most-searched h1 {
+    font-size: 2.5em;
+
+}
+
+#container-most-searched {
+    min-height: 2425px;
+}
+
+#container-1-most-searched {
+    grid-template-rows: 4% 92% 4%;
+}
+
+.searched, .searched img {
+    height: 140px;
+    width: 140px;
+    margin-top: 0;
+}
+
+.most-searched-container {
+
+    grid-template-columns: 25% 75%;
+
+}
+
+}
+
+@media (max-width: 740px) {
+    .searched, .searched img {
+        height: 130px;
+        width: 130px;
+        margin-top: 0;
+    }
+
+    .most-searched-container p {
+        font-size: 0.6rem;
+    }
+
+    .most-searched-container h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width:640px) {
+    .m-searched-container {
+
+        margin-top: -8%;
+    }
+}
+
+@media(max-width: 600px) {
+    .m-searched-container {
+
+        margin-top: -9%;
+    }
+    .searched, .searched img {
+        height: 120px;
+        width: 120px;
+
+    }
+
+    .most-searched-container p {
+        font-size: 0.55rem;
+    }
+
+    .most-searched-container h2 {
+        font-size: 1.05rem;
+    }
+
+    #container-most-searched {
+        min-height: 2240px;
+    }
+
+    .most-searched-container {
+        height: none;
+    }
+
+    .most-searched-container {
+        grid-template-columns: 30% 70%;
+    }
+}
+
+@media(max-width: 485px) {
+    .most-searched-container {
+        grid-template-columns: 30% 70%;
+    }
+
+    .m-searched-container {
+
+        margin-top: -13%;
+    }
+    #container-most-searched {
+        min-height: 1900px;
+    }
+
+    .searched, .searched img {
+        height: 110px;
+        width: 110px;
+    }
+}
+
+
+@media(max-width: 445px) {
+    .searched, .searched img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .m-searched-container {
+
+        margin-top: -14%;
+    }
+    .most-searched-container p {
+        font-size: 0.45rem;
+    }
+
+    .most-searched-container h2 {
+        font-size: 0.95rem;
+    }
+
+    #container-1-most-searched h1 {
+        font-size: 2.3em;
+    }
+
+    #container-most-searched {
+        min-height: 1600px;
+    }
+}
+
+@media(max-width: 400px) {
+    .searched, .searched img {
+        height: 90px;
+        width: 90px;
+    
+    }
+
+    #container-most-searched {
+        min-height: 1410px;
+    }
+
+    .most-searched-container p {
+        font-size: 0.35rem;
+    }
+
+    #container-1-most-searched h1 {
+        font-size: 2em;
+    }
+}
+
+@media(max-width:360px) {
+    .m-searched-container {
+        margin-top: -15.5%;
+
+    }
+
+    .searched, .searched img {
+        height: 85px;
+        width: 85px;
+    }
+}

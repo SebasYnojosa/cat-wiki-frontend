@@ -1,0 +1,709 @@
+.main-cat-container {
+    display: grid;
+    grid-template-rows: 46% 54%;
+    border-radius: calc(8px + 2.2%);
+    background-color: #E3E1DC;
+    overflow: hidden;
+    /*height: 650px;*/
+    min-height: 950px;
+    height: 75%;
+}
+
+.main-cat-container-img {
+    background-image: url("../images/HeroImagelg.png");
+    background-size: 100% 100%;
+    background-clip: border-box;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.logo-inverse-container  {
+    max-width: 100%; 
+    max-height: 50%; 
+    font-family: 'Mystery Quest', cursive;
+    font-size: 3rem;
+    color:#FFFFFF;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.main-cat-container-img-1 {
+  /*  display: grid;
+    grid-template-rows: 55% 45%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-cat-container-img-1 p {
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-align: left;
+    width: 70%;
+}
+.logo-inverse-container img {
+   /* filter: brightness(0) invert(1);*/
+    width: auto;
+    height: auto;
+    padding-left: 3%;
+    max-width: 18%;
+   /** position: absolute; 
+    width: 100%; 
+    height: 100%; */
+}
+
+.inside-cat-container-img-1 {
+    width: 75%;
+    height: 60%;
+    margin: auto auto;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.inside-cat-container-img-1 p {
+    margin-top: 2.5%;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.most-searched {
+    width: 87.5%;
+    height: 80%;
+    margin: auto;
+    margin-top: 1.8%;
+    display: grid;
+    grid-template-rows: 10% 25% 65%;
+    align-items: center;
+}
+
+.most-searched p {
+    text-align: left;
+    font-size: 1.7rem;
+}
+
+.most-searched h2 {
+    width: 100%;
+    text-align: left;
+    font-size: 1.9rem;
+}
+
+.most-searched-discover {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.see-more p {
+    display: inline;
+}
+
+.see-more {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.see-more img {
+
+    width: 12px;
+    height: 6%;
+    padding-left: 5px;
+    margin-bottom: 4.8%;
+    filter: invert(53%) sepia(5%) saturate(950%) hue-rotate(343deg) brightness(85%) contrast(91%);
+}
+
+.see-more svg {
+    filter: invert(53%) sepia(5%) saturate(950%) hue-rotate(343deg) brightness(85%) contrast(91%);
+
+}
+
+.see-more-2 {
+    display: inline-flex;
+    margin-right: 0;
+    justify-content: flex-end;
+    align-items: end;
+
+}
+
+.see-more-2 p {
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.see-more a:hover {
+    color: rgba(41, 21, 7, 0.6);
+}
+
+
+.see-more a {
+    color: rgba(41, 21, 7, 0.6);
+}
+
+.breeds-to-discover {
+    display: flex;
+    align-content: end;
+    justify-content: flex-start;
+}
+
+.breeds-to-discover h2 {
+    display: inline;
+    line-height: 1;
+    font-size: 3.2rem;
+}
+
+
+.mi-rectangulo {
+    width: 70px;
+    margin-top: 8px;
+    height: 3px;
+    background-color: #4D270C; /* Cambia #007bff por el color que desees */
+    border-radius: 25px 25px 25px 25px; /* Aplica bordes redondeados a los lados izquierdo y derecho */
+    text-align: center; /* Centra el contenido del rectángulo horizontalmente */
+    line-height: 50px; /* Centra el contenido del rectángulo verticalmente */
+    margin-left: 0.09%;
+
+
+}
+
+.most-searched-breed-2 p {
+    margin-bottom: 0;
+    margin-top: 0.3%;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.see-more a {
+    font-size: 1.4rem;
+}
+
+.see-more img {
+    width: 25px;
+    margin-bottom: 3.8%;
+}
+
+.rounded-div {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /*border-radius: 10px; */ /* Puedes ajustar el valor para obtener el redondeo deseado */
+    background-color:#DEC68B; /* Color de fondo opcional para visualizar mejor el div */
+    padding: 10px; /* Agregar espaciado interno opcional para separar el contenido del borde */
+    width: 7.5px;
+    height: 110px;
+}
+
+.most-searched-photos {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.img-container {
+    /*width: 20%;*/
+    width: 270px;
+    height: 270px;
+    font-weight: 600;
+}
+
+.img-container img {
+    width: 100%;
+    /*height: auto;*/
+    height: 100%;
+
+    border-radius: calc(22px + 2%);
+}
+
+/*.most-searched-photos::before {
+    content: "";
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;*/
+    /*border-radius: 10px; */ /* Puedes ajustar el valor para obtener el redondeo deseado */
+   /* background-color:#DEC68B; *//* Color de fondo opcional para visualizar mejor el div */
+     /* Agregar espaciado interno opcional para separar el contenido del borde */
+   /* width: 10px;
+    height: 120px;
+    right: 100%;
+}*/
+
+
+#first-image::before {
+    content: "";
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    /*border-radius: 10px; */ /* Puedes ajustar el valor para obtener el redondeo deseado */
+    background-color:#DEC68B; /* Color de fondo opcional para visualizar mejor el div */
+     /* Agregar espaciado interno opcional para separar el contenido del borde */
+    width: 10px;
+    height: 180px;
+    right: 100%;
+    top: 45px;
+
+
+}
+
+#first-image {
+    width: 270px;
+    height: 270px;
+
+
+}
+
+.main-cat-container-most-searched, a p {
+    color: #291507;
+    font-weight: 600;
+
+}
+
+@media (max-width: 1700px) {
+    #first-image {
+        height: 260px;
+        width: 260px;
+    }
+
+    .img-container {
+        height: 260px;
+        width: 260px;
+    }
+
+    #first-image::before {
+        top: 50px;
+        height: 150px;
+    }
+
+    .see-more a {
+        font-size: 1.2rem;
+    }
+
+    .see-more img {
+        width: 19px;
+    }
+
+    .most-searched-photos p {
+        font-size: 1.4rem;
+    }
+
+    .mi-rectangulo {
+        margin-top: 6px;
+    }
+
+    
+}
+
+@media (max-width: 1650px) {
+    .most-searched-discover h2 {
+        font-size: 2.4rem;
+    }
+    
+    .most-searched-photos p {
+        font-size: 1.1rem;
+    }
+
+    .see-more p {
+        font-size: 1.5rem;
+    }
+
+
+    .inside-cat-container-img-1 p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1550px) {
+    .img-container {
+        height: 220px;
+        width: 220px;
+    }
+
+    #first-image {
+        height: 220px;
+        width: 220px;
+    }
+
+    #first-image::before {
+        top: 40px;
+        height: 140px;
+    }
+    .most-searched-discover h2 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .img-container {
+        height: 200px;
+        width: 200px;
+    }
+
+    #first-image {
+        height: 200px;
+        width: 200px;
+    }
+
+    #first-image::before {
+        top: 30px;
+        height: 140px;
+    }
+        
+    .see-more a {
+        font-size: 0.9rem;
+    }
+
+    .see-more img {
+        width: 20px;
+        margin-bottom: 4.8%;
+    }
+
+    .most-searched-breed-2 p {
+        font-size: 1.3rem;
+    }
+
+
+
+}
+
+
+
+/*@media (max-width: 1410px) {
+    .img-container {
+        height: 200px;
+        width: 200px;
+    }
+
+    #first-image {
+        height: 200px;
+        width: 200px;
+    }
+} */
+
+@media (max-width: 1250px) {
+    .main-cat-container {
+        min-height: 800px;
+    }
+
+    .most-searched-photos p {
+        font-size: 1rem;
+    }
+    .most-searched-discover h2 {
+        font-size: 2rem;
+    }
+
+    .see-more p {
+        font-size: 1rem;
+    }
+
+    .see-more img {
+        margin-bottom: 3%;
+    }
+    .inside-cat-container-img-1 p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    .main-cat-container {
+        min-height: 700px;
+    }
+
+    .img-container {
+        height: 180px;
+        width: 180px;
+    }
+
+    #first-image {
+        height: 180px;
+        width: 180px;
+    }
+
+    #first-image::before {
+        top: 27.5px;
+        height: 135px;
+    }
+
+    .most-searched-discover h2 {
+        font-size: 1.75rem;
+    }
+
+    .most-searched-photos p {
+        font-size: 0.85rem;
+    }
+    
+}
+
+
+
+@media (max-width: 920px) {
+    .img-container {
+        height: 165px;
+        width: 165px;
+    }
+
+    #first-image {
+        height: 165px;
+        width: 165px;
+    }
+
+    #first-image::before {
+        top: 20px;
+        height: 125px;
+    }
+        
+}
+
+@media (max-width: 850px) {
+    .img-container {
+        height: 155px;
+        width: 155px;
+    }
+
+    #first-image {
+        height: 155px;
+        width: 155px;
+    }
+
+    #first-image::before {
+        top: 15px;
+        height: 125px;
+    }   
+}
+
+
+@media (max-width: 768px) {
+    .main-cat-container {
+        grid-template-rows: 20% 80%;
+      }
+
+      .inside-cat-container-img-1 {
+        height: 80%;
+      }
+
+      .inside-cat-container-img-1 p {
+        font-size: 0.7rem;
+        width: 100%;
+    }
+
+      .logo-inverse-container {
+        font-size: 1rem;
+      }
+
+      .get {
+        width: 100%;
+      }
+
+      #first-image::before {
+        top: 95px;
+        height: 180px;
+        width: 7px;
+    }   
+
+    .img-container {
+        height: 100%;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .img-container img {
+        height: 250px;
+        width: 250px;
+    }
+
+    #first-image {
+        height: 250px;
+        width: 250px;
+    }
+
+    .most-searched-photos {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+    }
+
+    #right {
+        display: grid;
+        justify-content: flex-end;
+    }
+
+    #left {
+        display: grid;
+        justify-content: flex-start;
+    }
+
+    .most-searched-photos p {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+    
+    .main-cat-container {
+        height: 85%;
+    }
+    .most-searched-breed-2 {
+        margin-top: 5%;
+    }
+    .most-searched-discover h2{
+        margin-top: 0;
+    }
+    .should-have-1 h2 {
+        margin-bottom: 4%;
+    }
+
+    .inside-cat-container-img-1 p {
+        font-size: 0.75rem;
+    }
+
+    .logo-container {
+        width: 20%;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .img-container img {
+        height: 220px;
+        width: 220px;
+    }
+
+    #first-image {
+        height: 220px;
+        width: 220px;
+    }
+
+    #first-image::before {
+        top: 80px;
+    }
+}
+
+
+@media (max-width: 585px) {
+    .img-container img {
+        height: 200px;
+        width: 200px;
+    }
+
+    #first-image {
+        height: 200px;
+        width: 200px;
+    }
+    #first-image::before {
+        height: 160px;
+    }
+
+    .most-searched-discover h2 {
+        font-size: 1.5rem;
+    }
+
+    .most-searched-discover {
+        margin-top: -7.5%;
+    }
+
+    .most-searched-discover h2 {
+        margin: auto;
+    }
+}
+
+
+
+@media (max-width: 535px) {
+    .img-container img {
+        height: 180px;
+        width: 180px;
+    }
+
+    #first-image {
+        height: 180px;
+        width: 180px;
+    }
+    #first-image::before {
+        height: 140px;
+    }
+
+    .most-searched-breed-2 p {
+        font-size: 1.1rem;
+    }
+
+    .mi-rectangulo{
+        height: 2.5px;
+    }
+}
+
+
+@media (max-width: 460px) {
+    .img-container img {
+        height: 160px;
+        width: 160px;
+    }
+
+    #first-image {
+        height: 160px;
+        width: 160px;
+    }
+    #first-image::before {
+        height: 120px;
+    }
+
+    .most-searched-discover h2 {
+        font-size: 1.2rem;    
+    }
+
+    .see-more p {
+        font-size: 0.85rem;
+    }
+
+    .see-more img  {
+        margin-bottom: 1.95%;
+    }
+
+    .should-have-1 p {
+        font-size: 0.9rem;
+    }
+
+    .most-searched-photos p {
+        font-size: 0.85rem;
+    }
+    
+}
+
+
+
+@media (max-width: 425px) {
+    .img-container img {
+        height: 140px;
+        width: 140px;
+    }
+
+    #first-image {
+        height: 140px;
+        width: 140px;
+    }
+    #first-image::before {
+        height: 100px;
+        width: 6px;
+    }
+
+    .inside-cat-container-img-1 p {
+        font-size: 0.65rem;
+    }
+
+    .most-searched-breed-2 p  {
+        font-size: 0.9rem;
+    }
+    
+}
+
+
+@media (max-width: 355px) {
+    .img-container img {
+        height: 120px;
+        width: 120px;
+    }
+
+    #first-image {
+        height: 120px;
+        width: 120px;
+    }
+    #first-image::before {
+        height: 80px;
+        width: 6px;
+    }
+}

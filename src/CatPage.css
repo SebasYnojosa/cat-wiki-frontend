@@ -1,0 +1,642 @@
+#container-cat-page {
+    grid-template-rows: 50% 50%;
+}
+
+#container-2-cat-page {
+    grid-template-rows: 91.6% 8.4%;
+}
+
+
+  .container-2-other-photos {
+    display: grid;
+    grid-template-rows: 5% 47.5% 47.5%;
+  }
+
+  .container-2-photos-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container-2-text-row {
+    text-align: left;
+  }
+
+  #photos-2 {
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  .container-1-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
+
+  .container-1-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .traits {
+    display: inline;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .trait {
+    display: inline;
+  }
+
+  .container-1-traits {
+    text-align: left;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .container-1-traits h2 {
+    font-size: 2.1rem;
+  }
+
+  .container-1-traits p {
+    font-size: 1.5rem;
+  }
+
+  .bar {
+    width: 100px; /* Cambia el ancho según tus necesidades */
+    height: 10px; /* Cambia la altura según tus necesidades */
+    background-color: #3498db; /* Cambia el color de fondo según tus necesidades */
+    border-radius: 5px; /* Ajusta el valor para redondear los bordes */
+    display: inline-block;
+  }
+
+  .bar-filled {
+    background-color: #544439;
+  }
+
+  .bar-empty {
+    background-color: #E0E0E0;
+  }
+
+
+  .bar-container-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea a la izquierda */
+  }
+
+ .wiki {
+  height: 300px;
+  width: 300px;
+  }
+
+  .trait-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bars {
+    margin-right: 8%;
+  }
+
+
+
+  #img-wiki {
+    position: relative;
+    height: 330px;
+    width: 330px;
+  }
+
+  #img-wiki::before {
+    content: "";
+    position: absolute;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    /*border-radius: 10px; */ /* Puedes ajustar el valor para obtener el redondeo deseado */
+    background-color:#DEC68B; /* Color de fondo opcional para visualizar mejor el div */
+     /* Agregar espaciado interno opcional para separar el contenido del borde */
+    width: 10px;
+    height: 260px;
+    right: 100%;
+    top: 35px;
+
+
+}
+
+
+.container-2-text-row {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 1500px) {
+  .container-2-text-row {
+    font-size: 1.2rem;
+  }
+
+  .container-1-traits h2 {
+    font-size: 2rem;
+}
+
+.container-1-traits p {
+  font-size: 1.4rem;
+}
+
+.wiki {
+  height: 270px;
+  width: 270px;
+}
+
+#img-wiki {
+  height: 300px;
+  width: 300px;
+}
+
+#img-wiki::before {
+  content: "";
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  /* border-radius: 10px; */
+  background-color: #DEC68B;
+  width: 10px;
+  height: 240px;
+  right: 100%;
+  top: 30px;
+}
+
+}
+
+
+@media(max-width:1400px) {
+  .bar {
+    width: 90px;
+  }
+
+}
+
+@media(max-width: 1350px) {
+  
+  .container-2-text-row {
+    font-size: 1.1rem;
+}
+
+.wiki {
+  height: 250px;
+  width: 250px;
+}
+}
+
+@media (max-width: 1265px) {
+  .bar {
+    width: 80px;
+    height: 8px;
+  }
+
+  .container-2-text-row {
+
+    margin-top: 0;
+}
+
+.wiki {
+  height: 230px;
+  width: 230px;
+}
+
+.container-1-traits h2 {
+  font-size: 1.8rem;
+}
+
+.container-1-traits p {
+  font-size: 1.3rem;
+}
+
+#img-wiki {
+  height: 260px;
+  width: 260px;
+}
+
+#img-wiki::before {
+  content: "";
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  /* border-radius: 10px; */
+  background-color: #DEC68B;
+  width: 8px;
+  height: 200px;
+  right: 100%;
+  top: 30px;
+}
+
+}
+
+@media(max-width: 1150px) {
+  .container-2-text-row h2 {
+    margin-top: 0;
+}
+ .bar {
+  width: 70px;
+ }
+
+ .container-1-traits p {
+  font-size: 1.2rem;
+}
+}
+
+@media(max-width: 1105px) {
+  .wiki {
+    height: 220px;
+    width: 220px;
+}
+}
+
+@media(max-width: 1000px) {
+  .wiki {
+    height: 200px;
+    width: 200px;
+}
+
+#img-wiki {
+  height: 230px;
+  width: 230px;
+}
+
+
+#img-wiki::before {
+  content: "";
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  /* border-radius: 10px; */
+  background-color: #DEC68B;
+  width: 7px;
+  height: 190px;
+  right: 100%;
+  top: 20px;
+}
+
+.bar {
+  width: 60px;
+ }
+
+ .container-2-text-row h2 {
+
+  font-size: 1rem;
+}
+
+.container-1-traits h2 {
+  font-size: 1.7rem;
+}
+
+.container-1-traits p {
+  font-size: 1.1rem;
+}
+}
+
+@media (max-width: 915px) {
+  .wiki {
+    height: 190px;
+    width: 190px;
+  }
+
+  .container-1-traits h2 {
+    font-size: 1.45rem;
+}
+.container-1-traits p {
+  font-size: 1rem;
+}
+
+#img-wiki {
+  height: 210px;
+  width: 210px;
+}
+
+#img-wiki::before {
+  height: 170px;
+  width: 6px;
+}
+
+}
+
+@media(max-width: 830px) {
+  .wiki {
+    height: 185px;
+    width: 185px;
+  }
+}
+
+@media(max-width: 830px) {
+  .wiki {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+@media(max-width: 768px) {
+  .container-1-container {
+    grid-template-columns: none;
+}
+
+.container-2-photos-row {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.wiki {
+  margin: auto;
+}
+
+.container-2-row-photos-2 {
+  display: flex;
+}
+
+#img-wiki {
+  width: 300px;
+
+}
+
+#img-wiki img {
+  height: 300px;
+  width: 300px;
+}
+
+#img-wiki::before {
+  height: 260px;
+  width: 7px;
+}
+
+.container-2-text-row {
+  margin-top: 55px;
+}
+
+.container-2-text-row h2 {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+#wiki-left, #wiki-right {
+  display: none;
+}
+
+#container-cat-page {
+  min-height: 2550px;
+}
+
+#photos-2 {
+  height: 35vh;
+  min-height: 492px;
+}
+
+#photos-1{
+  margin-top: 12%;
+  height: 40vh;
+  min-height: 590px;
+}
+
+}
+
+
+@media (max-width: 730px) {
+  .wiki img {
+    height: 240px;
+    width: 240px;
+}
+
+#container-cat-page {
+  min-height: 2450px;
+}
+  
+}
+
+@media (max-width: 685px) {
+  .wiki img {
+    height: 230px;
+    width: 230px;
+}
+
+}
+
+@media (max-width: 640px) {
+
+  .wiki img {
+    height: 220px;
+    width: 220px;
+  }
+  #container-cat-page {
+    min-height: 2350px;
+}
+
+#photos-1 {
+  min-height: 565px;
+}
+
+#container-cat-page {
+  min-height: 2250px;
+}
+
+
+}
+
+@media (max-width: 615px) {
+  .wiki img {
+    height: 210px;
+    width: 210px;
+  }
+
+
+  #container-cat-page {
+    min-height: 2150px;
+  }
+
+  #photos-1 {
+    min-height: 545px;
+}
+}
+
+@media (max-width: 575px) {
+  .bar {
+    width: 55px;
+}
+
+.wiki img {
+  height: 200px;
+  width: 200px;
+}
+
+#container-cat-page {
+  min-height: 2050px;
+}
+
+}
+
+
+@media(max-width: 515px) {
+  .bar {
+    width: 45px;
+}
+
+#photos-1 {
+  min-height: 508px;
+}
+
+.wiki img {
+  height: 190px;
+  width: 190px;
+}
+
+
+#container-cat-page {
+  min-height: 1900px;
+}
+
+
+
+#img-wiki {
+  height: 280px;
+  width: 280px;
+}
+
+.container-1-traits p {
+  font-size: 0.85rem;
+}
+
+}
+
+@media(max-widtH: 480px) {
+  #container-cat-page {
+    min-height: 1750px;
+}
+
+#photos-1 {
+  min-height: 490px;
+}
+
+#img-wiki {
+  height: 265px;
+  width: 265px;
+}
+
+
+#img-wiki img {
+  height: 265px;
+  width: 265px;
+}
+
+.container-1-traits h2 {
+  font-size: 1.25rem;
+  margin-top: 10%;
+}
+
+.container-2-text-row h2 {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+#img-wiki::before {
+  height: 225px;
+  width: 5.5px;
+}
+
+}
+
+@media(max-width:465px) {
+  .wiki {
+    height: 160px;
+    width: 160px;
+}
+
+#photos-2 {
+  height: 35vh;
+  min-height: 442px;
+}
+
+#photos-1 {
+  min-height: 460px;
+}
+
+.wiki img {
+  height: 175px;
+  width: 175px;
+}
+
+}
+
+@media(max-width: 445px) {
+  #photos-2 {
+    height: 35vh;
+    min-height: 340px;
+}
+
+#photos-1 {
+  min-height: 420px;
+}
+
+.wiki img {
+  height: 165px;
+  width: 165px;
+}
+
+.wiki {
+height: 165px;
+width: 165px;
+}
+
+.bar {
+  width: 38px;
+}
+
+}
+
+
+@media (max-width: 400px ) {
+  .container-2-other-photos {
+    margin-top: 10%;
+}
+#container-cat-page {
+  min-height: 1650px;
+}
+
+#photos-1 {
+  min-height: 392px;
+}
+
+.bar {
+  width: 33px;
+}
+
+}
+
+
+@media(max-widtH: 385px) {
+  .wiki {
+    height: 145px;
+    width: 145px;
+}
+
+.wiki img {
+  height: 145px;
+  width: 145px;
+}
+.bar {
+  width: 28px;
+}
+
+#container-cat-page {
+  min-height: 1550px;
+}
+
+.container-2-other-photos {
+  margin-top: 25%;
+}
+
+#photos-1 {
+  min-height: 360px;
+}
+
+}
