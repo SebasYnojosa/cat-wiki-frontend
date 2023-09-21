@@ -25,7 +25,7 @@ function MainContainer () {
                     <div>
                         <div className="logo-inverse-container">
                             CatWiki
-                            <img src="../images/invertido.png" alt="" />
+                            <img src="../public/images/invertido.png" alt="" />
 
                         </div>
                         <div className="get"><p>Get to know more about your cat breed</p></div>
@@ -59,7 +59,7 @@ function MainContainer () {
                     <div className="see-more">
                         <a href="/most_searched">
                         <div className="see-more-2">
-                            <p>SEE MORE</p> <img src="../images/arrow-right-alt_117700.svg" alt=""/> 
+                            <p>SEE MORE</p> <img src="../public/images/arrow-right-alt_117700.svg" alt=""/> 
                         </div>
                         </a>
                     </div>
