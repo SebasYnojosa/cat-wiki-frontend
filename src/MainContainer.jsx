@@ -9,7 +9,7 @@ function MainContainer () {
     const [mostSearchedCats, setMostSearchedCats] = useState([]);
 
     useEffect(() => {
-      axios.get('http://localhost:3000/most_searched')
+      axios.get('https://cat-wiki-api-8m0t.onrender.com/most_searched')
         .then(response => {
           setMostSearchedCats(response.data);
           console.log("Most searched ", response.data);
@@ -25,7 +25,7 @@ function MainContainer () {
                     <div>
                         <div className="logo-inverse-container">
                             CatWiki
-                            <img src="../public/images/invertido.png" alt="" />
+                            <img src="../images/invertido.png" alt="" />
 
                         </div>
                         <div className="get"><p>Get to know more about your cat breed</p></div>
@@ -59,7 +59,7 @@ function MainContainer () {
                     <div className="see-more">
                         <a href="/most_searched">
                         <div className="see-more-2">
-                            <p>SEE MORE</p> <img src="../public/images/arrow-right-alt_117700.svg" alt=""/> 
+                            <p>SEE MORE</p> <img src="../images/arrow-right-alt_117700.svg" alt=""/> 
                         </div>
                         </a>
                     </div>

@@ -17,7 +17,7 @@ function CatPage (props) {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3000/cat/${catName}`)
+        axios.get(`https://cat-wiki-api-8m0t.onrender.com/cat/${catName}`)
           .then(response => {
             setCatData(response.data);
             console.log(response.data)
@@ -31,7 +31,7 @@ function CatPage (props) {
 
   useEffect(() => {
     
-    axios.get(`http://localhost:3000/cat/${catName}`)
+    axios.get(`https://cat-wiki-api-8m0t.onrender.com/cat/${catName}`)
     .then(response => {
       setCatData(response.data);
     })

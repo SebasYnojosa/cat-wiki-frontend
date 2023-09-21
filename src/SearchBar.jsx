@@ -14,7 +14,7 @@ function SearchBar() {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:3000/')
+    axios.get('https://cat-wiki-api-8m0t.onrender.com/')
     .then(response => {
       const optionNames = response.data.map(option => option.name);
       setOptions(optionNames);
@@ -45,7 +45,7 @@ function SearchBar() {
 
   const handleOptionSelect = (event, selectedOption) => {
     if (selectedOption) {
-      axios.put(`http://localhost:3000/incrementSearchCount/${encodeURIComponent(selectedOption)}`)
+      axios.put(`https://cat-wiki-api-8m0t.onrender.com/incrementSearchCount/${encodeURIComponent(selectedOption)}`)
         .then(response => {
           // Si la solicitud fue exitosa, redirige a la página del gato
           navigate(`/cat/${encodeURIComponent(selectedOption)}`);

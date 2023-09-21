@@ -8,7 +8,7 @@ function ShouldHave () {
             <div className="mi-rectangulo"></div> 
             <h2 style={{textAlign:"left"}}>Why should you have a cat?</h2> 
             <p style={{textAlign:"justify"}}>Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves</p>
-            <div><a href="#">READ MORE <img src="../images/arrow-right-alt_117700.svg" alt="" /></a> </div>
+            <div><a href="https://www.helpguide.org/articles/healthy-living/joys-of-owning-a-cat.htm#:~:text=Owning%20a%20cat%20can%20bring,Lundgren%20and%20Robert%20Segal%2C%20M.A.">READ MORE <img src="../images/arrow-right-alt_117700.svg" alt="" /></a> </div>
         </div>
         <div className="should-have-2">
             <div>
