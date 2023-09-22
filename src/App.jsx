@@ -13,11 +13,11 @@ function App() {
   return (
  
     <Router>
-      <Routes>
-        <Route path="/" element={<Container />} />
+ 
+        <Route exact path="/" element={<Container />} />
         <Route path="/cat/:catName" element={<CatPage />} />
-        <Route path="/most_searched/" element={<MostSearched/>}/>
-      </Routes>
+        <Route path="/most_searched" element={<MostSearched/>}/>
+
     </Router>
 
   );
