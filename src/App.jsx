@@ -13,11 +13,11 @@ function App() {
   return (
  
     <Router>
-        <Switch>
+        <Routes>
           <Route exact path="/" element={<Container />} />
           < Route exact path="/cat/:catName" element={<CatPage />} />
           <Route exact path="/most_searched" element={<MostSearched/>}/>
-        </Switch>
+        </Routes>
     </Router>
 
   );
