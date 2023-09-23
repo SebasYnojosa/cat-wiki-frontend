@@ -5,7 +5,7 @@ function Top () {
     return <div className="top">
         <div className="logo-container">
             <a href="/">
-            <img src="../images/CatWikiLogo.svg" alt="" />
+            <img src="../images/CatwikiLogo.svg" alt="" />
             </a>
         </div>
     </div>

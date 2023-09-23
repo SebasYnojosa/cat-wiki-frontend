@@ -57,7 +57,7 @@ function MainContainer () {
                     </div>
               
                     <div className="see-more">
-                        <a href="/most_searched">
+                        <a href="/#/most_searched">
                         <div className="see-more-2">
                             <p>SEE MORE</p> <img src="../images/arrow-right-alt_117700.svg" alt=""/> 
                         </div>
@@ -75,22 +75,22 @@ function MainContainer () {
                         <div id="first-image">
                         <img src={mostSearchedCats.length > 0 && mostSearchedCats[0].image_url} alt="" />
                         </div>
-                        <a href={`/cat/${mostSearchedCats.length > 0 && mostSearchedCats[0].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[0].name}</p> </a>
+                        <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[0].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[0].name}</p> </a>
                     </div>
                     <div className="img-container" id="right">
                         <img src={mostSearchedCats.length > 0 && mostSearchedCats[1].image_url} alt="" />
-                        <a href={`/cat/${mostSearchedCats.length > 0 && mostSearchedCats[1].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[1].name}</p> </a>
+                        <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[1].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[1].name}</p> </a>
                         
                     </div>
                   
                 
                     <div className="img-container" id="left">
                         <img src={mostSearchedCats.length > 0 && mostSearchedCats[2].image_url} alt="" />
-                        <a href={`/cat/${mostSearchedCats.length > 0 && mostSearchedCats[2].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[2].name}</p> </a>
+                        <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[2].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[2].name}</p> </a>
                     </div>
                     <div className="img-container" id="right">
                         <img src={mostSearchedCats.length > 0 && mostSearchedCats[3].image_url} alt="" />
-                        <a href={`/cat/${mostSearchedCats.length > 0 && mostSearchedCats[3].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[3].name}</p> </a>
+                        <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[3].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[3].name}</p> </a>
                     </div>
            
                     
