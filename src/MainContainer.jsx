@@ -57,7 +57,7 @@ function MainContainer () {
                     </div>
               
                     <div className="see-more">
-                        <a href="/#/most_searched">
+                        <a href="#/most_searched">
                         <div className="see-more-2">
                             <p>SEE MORE</p> <img src="../images/arrow-right-alt_117700.svg" alt=""/> 
                         </div>
