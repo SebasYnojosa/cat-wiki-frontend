@@ -3,25 +3,37 @@ import "./SearchBar.css";
 import Autocomplete from '@mui/material/Autocomplete';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import CircularProgress from '@mui/material/CircularProgress'; 
 
 function SearchBar() {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState(null);
   const [options, setOptions] = useState([]);
   const navigate = useNavigate(); // Initialize useNavigate
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleInputChange = (event, newValue) => {
     setSearchValue(newValue);
   };
 
   useEffect(() => {
-    axios.get('https://cat-wiki-api-8m0t.onrender.com/')
-    .then(response => {
-      const optionNames = response.data.map(option => option.name);
-      setOptions(optionNames);
-    })
-    .catch(error => {
-      console.error('Error fetching autocomplete options:', error);
-    });
+    const url = 'https://cat-wiki-api-8m0t.onrender.com/';
+    const local = 'http://localhost:3000/';
+    
+  
+      axios.get(local)
+      .then(response => {
+        //console.log("respuestas ", response);
+        
+        const optionNames = response.data.map(option => option.name);
+        setOptions(optionNames);
+        setIsLoading(false);
+      })
+      .catch(error => {
+        //console.log("el error es", error);
+        console.error('Error fetching autocomplete options:', error);
+        setIsLoading(false);
+      });
+
   }, []);
 
   const [placeholder, setPlaceholder] = useState('');
@@ -44,13 +56,16 @@ function SearchBar() {
   }, []);
 
   const handleOptionSelect = (event, selectedOption) => {
+    const url = `https://cat-wiki-api-8m0t.onrender.com/incrementSearchCount/${encodeURIComponent(selectedOption)}`;
+    const localCat = `http://localhost:3000/incrementSearchCount/${encodeURIComponent(selectedOption)}`;
     if (selectedOption) {
-      axios.put(`https://cat-wiki-api-8m0t.onrender.com/incrementSearchCount/${encodeURIComponent(selectedOption)}`)
+      axios.put(localCat)
         .then(response => {
           // Si la solicitud fue exitosa, redirige a la página del gato
           navigate(`/cat/${encodeURIComponent(selectedOption)}`);
         })
         .catch(error => {
+          console.log("El error es: ", error)
           console.error('Error al incrementar searchCount:', error);
         });
     }
@@ -70,6 +85,7 @@ function SearchBar() {
           value={searchValue}
           onChange={handleOptionSelect}
           onInputChange={handleInputChange}
+          loading={isLoading}
           //renderOption={(option) => <li key={option}>{option}</li>}
           renderInput={(params) => (
             <div ref={params.InputProps.ref}>
@@ -80,7 +96,9 @@ function SearchBar() {
                 placeholder={placeholder}
               />
             </div>
+            
           )}
+          noOptionsText={isLoading ? <CircularProgress size={24} /> : "No options"} 
         />
         <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
           <svg viewBox="0 0 24 24">

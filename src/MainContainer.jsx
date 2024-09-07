@@ -3,13 +3,35 @@ import "./MainContainer.css"
 import SearchBar from "./SearchBar";
 import axios from "axios";
 import Autocomplete from '@mui/material/Autocomplete';
+import CircularProgress from "@mui/material/CircularProgress";
 
 function MainContainer () {
     const options = ['Option 1', 'Option 2'];
     const [mostSearchedCats, setMostSearchedCats] = useState([]);
+    const [mostSearchedCatsLoading, setMostSearchedCatsLoading] = useState({
+        image_1: true,
+        image_2: true, 
+        image_3: true,
+        image_4: true
+    });
+
+    const handleImageLoad = (imageKey) => {
+
+            setMostSearchedCatsLoading(
+                prevState => ({
+                    ...prevState,
+                    [imageKey]: false,
+                })
+            );
+
+        
+    }
+
+    const url = 'https://cat-wiki-api-8m0t.onrender.com/most_searched';
+    const local = 'http://localhost:3000/most_searched';
 
     useEffect(() => {
-      axios.get('https://cat-wiki-api-8m0t.onrender.com/most_searched')
+      axios.get(local)
         .then(response => {
           setMostSearchedCats(response.data);
           console.log("Most searched ", response.data);
@@ -73,12 +95,18 @@ function MainContainer () {
                     
                     <div className="img-container" id="left">
                         <div id="first-image">
-                        <img src={mostSearchedCats.length > 0 && mostSearchedCats[0].image_url} alt="" />
+                            {mostSearchedCatsLoading.image_1 && (<div className="loading-wrapper"> <CircularProgress sx={80} /> </div>
+                                
+                            )}
+                            <img onLoad={() => handleImageLoad('image_1')} src={mostSearchedCats.length > 0 && mostSearchedCats[0].image_url} alt="" />
                         </div>
                         <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[0].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[0].name}</p> </a>
                     </div>
                     <div className="img-container" id="right">
-                        <img src={mostSearchedCats.length > 0 && mostSearchedCats[1].image_url} alt="" />
+                        {mostSearchedCatsLoading.image_2 && (<div className="loading-wrapper"> <CircularProgress sx={80} /> </div>
+                                
+                            )}
+                            <img onLoad={() => handleImageLoad('image_2')} src={mostSearchedCats.length > 0 && mostSearchedCats[1].image_url} alt="" />
                         <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[1].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[1].name}</p> </a>
                         
                     </div>

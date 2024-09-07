@@ -2,6 +2,24 @@
     grid-template-rows: 50% 50%;
 }
 
+.loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.loading-wrapper-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+
+
 #container-2-cat-page {
     grid-template-rows: 91.6% 8.4%;
 }
@@ -340,6 +358,15 @@
   .container-1-container {
     grid-template-columns: none;
 }
+  #right-cat-page {
+    display: grid;
+  }
+
+  .loading-wrapper-2 {
+    width: 260px;
+    height: 260px;
+  }
+  
 
 .container-2-photos-row {
   display: grid;
@@ -348,6 +375,8 @@
 
 .wiki {
   margin: auto;
+  height: 260px;
+  width: 260px;
 }
 
 .container-2-row-photos-2 {
@@ -355,6 +384,7 @@
 }
 
 #img-wiki {
+  height: 300px;
   width: 300px;
 
 }
@@ -407,6 +437,12 @@
     width: 240px;
 }
 
+.loading-wrapper-2 {
+  width: 240px;
+  height: 240px;
+}
+
+
 #container-cat-page {
   min-height: 2450px;
 }
@@ -419,6 +455,12 @@
     width: 230px;
 }
 
+.loading-wrapper-2 {
+  width: 230px;
+  height: 230px;
+}
+
+
 }
 
 @media (max-width: 640px) {
@@ -427,6 +469,12 @@
     height: 220px;
     width: 220px;
   }
+
+  .loading-wrapper-2 {
+    width: 220px;
+    height: 220px;
+  }
+  
   #container-cat-page {
     min-height: 2350px;
 }
@@ -448,6 +496,11 @@
     width: 210px;
   }
 
+  .loading-wrapper-2 {
+    width: 210px;
+    height: 210px;
+  }
+
 
   #container-cat-page {
     min-height: 2150px;
@@ -464,12 +517,21 @@
 }
 
 .wiki img {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
+}
+
+.loading-wrapper-2 {
+  width: 180px;
+  height: 180px;
 }
 
 #container-cat-page {
   min-height: 2050px;
+}
+
+.container-2-photos-row {
+  width: 95%;
 }
 
 }
@@ -489,6 +551,10 @@
   width: 190px;
 }
 
+.loading-wrapper-2 {
+  width: 190px;
+  height: 190px;
+}
 
 #container-cat-page {
   min-height: 1900px;
@@ -496,10 +562,10 @@
 
 
 
-#img-wiki {
+/*#img-wiki {
   height: 280px;
   width: 280px;
-}
+}*/
 
 .container-1-traits p {
   font-size: 0.85rem;
@@ -509,7 +575,7 @@
 
 @media(max-widtH: 480px) {
   #container-cat-page {
-    min-height: 1750px;
+    min-height: 1850px;
 }
 
 #photos-1 {
@@ -565,6 +631,17 @@
   width: 175px;
 }
 
+
+.loading-wrapper-2 {
+  width: 175px;
+  height: 175px;
+}
+
+.container-2-photos-row {
+  width: 100%;
+}
+
+
 }
 
 @media(max-width: 445px) {
@@ -580,6 +657,11 @@
 .wiki img {
   height: 165px;
   width: 165px;
+}
+
+.loading-wrapper-2 {
+  width: 165px;
+  height: 165px;
 }
 
 .wiki {
@@ -598,8 +680,10 @@ width: 165px;
   .container-2-other-photos {
     margin-top: 10%;
 }
+
+
 #container-cat-page {
-  min-height: 1650px;
+  min-height: 1775px;
 }
 
 #photos-1 {
@@ -623,13 +707,15 @@ width: 165px;
   height: 145px;
   width: 145px;
 }
+
+.loading-wrapper-2 {
+  width: 145px;
+  height: 145px;
+}
 .bar {
   width: 28px;
 }
 
-#container-cat-page {
-  min-height: 1550px;
-}
 
 .container-2-other-photos {
   margin-top: 25%;
@@ -639,4 +725,9 @@ width: 165px;
   min-height: 360px;
 }
 
+#container-cat-page {
+  min-height: 1715px;
 }
+
+}
+

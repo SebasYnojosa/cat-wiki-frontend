@@ -5,6 +5,7 @@ import Top from "./Top";
 import Bottom from "./Bottom";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress'; 
 
 
 function CatPage (props) {
@@ -14,16 +15,32 @@ function CatPage (props) {
     //const catName = decodeURIComponent(props.catName);
     const {catName} = useParams();
     const [catData, setCatData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [imageLoading, setImageLoading] = useState({
+        images_1: true,
+        images_2: true,
+        images_3: true,
+        images_4: true,
+        images_5: true,
+        images_6: true,
+        images_7: true,
+        images_8: true,
+      });
 
     useEffect(() => {
 
-        axios.get(`https://cat-wiki-api-8m0t.onrender.com/cat/${catName}`)
+        const url = `https://cat-wiki-api-8m0t.onrender.com/cat/${catName}`;
+
+        const local = `http://localhost:3000/cat/${catName}`;
+
+        axios.get(local)
           .then(response => {
             setCatData(response.data);
-            console.log(response.data)
+            setLoading(false);
           })
           .catch(error => {
             console.error('Error fetching cat data:', error);
+            setLoading(false);
           });
 
       }, [catName]);
@@ -54,6 +71,9 @@ function CatPage (props) {
 
       }, []);
 
+      const handleImageLoad = (imageKey) => {
+        setImageLoading(prevState => ({ ...prevState, [imageKey]: false }));
+      };
 
 
       function renderBars(score) {
@@ -72,13 +92,17 @@ function CatPage (props) {
         <div className="container-1">
             <Top></Top>
             <div className="container-1-container">
-                <div className="container-1-image">                    
+                <div className="container-1-image">                 
                     <div className="img-container" id="img-wiki">
-                        <img src={catData.image_url} alt="" />
-
+                        {loading ? 
+                        (<div className="loading-wrapper">
+                            <CircularProgress size={80}  />
+                          </div>) : (
+                            <img src={catData.image_url} alt="" />
+                        )}
                     </div>
 
-                    </div>
+                </div>
                 <div> 
                     <div className="container-1-traits">
                         <h2>{catData.name}</h2>
@@ -102,60 +126,127 @@ function CatPage (props) {
         </div>
         
         <div className="container-2" id="container-2-cat-page"> 
-        <div className="container-2-other-photos">
-            <div className="container-2-text-row">
-                <h2>Other photos</h2>
-            </div>
-            
-            <div className="container-2-photos-row" id="photos-1">
-            { catData.images_1 && <div className="img-container wiki" id="left">
-
-                        <img src={catData.images_1} alt="" />
-
-
-            </div>}
-                    {catData.images_2 && <div className="img-container wiki" id="right">
-                        <img src={catData.images_2} alt="" />
-
-                        
-                    </div>}
-                  
+            <div className="container-2-other-photos">
+                <div className="container-2-text-row">
+                    <h2>Other photos</h2>
+                </div>
                 
-                    {catData.images_3 &&  <div className="img-container wiki" id="left">
-                        <img src={catData.images_3} alt="" />
-
-                    </div>}
-                    {catData.images_4 && <div className="img-container wiki" id="right">
-                        <img src={catData.images_4} alt="" />
-
-                    </div>}
-            </div>
+                <div className="container-2-photos-row" id="photos-1">
+                {catData.images_1 && (
+                    <div className="img-container wiki" id="right">
+                    {imageLoading.images_1 && ( <div className="loading-wrapper-2">
+                                <CircularProgress size={80}  />
+                            </div>)}
+                    <img 
+                    src={catData.images_1} 
+                    alt="" 
+                    onLoad={() => handleImageLoad('images_1')} 
+                    style={{ display: imageLoading.images_1 ? 'none' : 'block' }}
+                    />
+                </div>
+                )}
+                    
+                {catData.images_2 && (
+                    <div className="img-container wiki" id="right">
+                    {imageLoading.images_2 && ( <div className="loading-wrapper-2">
+                                <CircularProgress size={80}  />
+                            </div>)}
+                    <img 
+                    src={catData.images_2} 
+                    alt="" 
+                    onLoad={() => handleImageLoad('images_2')} 
+                    style={{ display: imageLoading.images_2 ? 'none' : 'block' }}
+                    />
+                </div>
+                )}
+                    
+                    
+                    {catData.images_3 && (
+                        <div className="img-container wiki" id="right">
+                        {imageLoading.images_3 && ( <div className="loading-wrapper-2">
+                                    <CircularProgress size={80}  />
+                                </div>)}
+                        <img 
+                        src={catData.images_3} 
+                        alt="" 
+                        onLoad={() => handleImageLoad('images_3')} 
+                        style={{ display: imageLoading.images_3 ? 'none' : 'block' }}
+                        />
+                    </div>
+                    )}
+                    {catData.images_4 && (
+                        <div className="img-container wiki" id="right">
+                        {imageLoading.images_4 && ( <div className="loading-wrapper-2">
+                                    <CircularProgress size={80}  />
+                                </div>)}
+                        <img 
+                        src={catData.images_4} 
+                        alt="" 
+                        onLoad={() => handleImageLoad('images_4')} 
+                        style={{ display: imageLoading.images_4 ? 'none' : 'block' }}
+                        />
+                    </div>
+                    )}
+                </div>
             <div className="container-2-photos-row" id="photos-2" style={{ justifyContent: catData.images_8 ? 'space-between' : 'space-evenly' }}>
 
 
-            {catData.images_5 && <div className="img-container wiki" id="left">
+                    {catData.images_5 && (
+                        <div className="img-container wiki" id="right">
+                        {imageLoading.images_5 && ( <div className="loading-wrapper-2">
+                                    <CircularProgress size={80}  />
+                                </div>)}
+                        <img 
+                        src={catData.images_5} 
+                        alt="" 
+                        onLoad={() => handleImageLoad('images_5')} 
+                        style={{ display: imageLoading.images_5 ? 'none' : 'block' }}
+                        />
+                    </div>
+                    )}
+                    {catData.images_6 && (
+                        <div className="img-container wiki" id="right">
+                        {imageLoading.images_6 && ( <div className="loading-wrapper-2">
+                                    <CircularProgress size={80}  />
+                                </div>)}
+                        <img 
+                        src={catData.images_6} 
+                        alt="" 
+                        onLoad={() => handleImageLoad('images_6')} 
+                        style={{ display: imageLoading.images_6 ? 'none' : 'block' }}
+                        />
+                    </div>
+                    )}
 
-                        <img src={catData.images_5} alt="" />
-
-
-            </div>}
-                    {catData.images_6 && <div className="img-container wiki" id="right">
-                        <img src={catData.images_6} alt="" />
-
-                        
-                    </div>}
-
-         
-                    {catData.images_7 && <div className="img-container wiki" id="wiki-left">
-                        <img src={catData.images_7} alt="" />
-
-                    </div>}
-                    {catData.images_8 && <div className="img-container wiki" id="wiki-right">
-                        <img src={catData.images_8} alt="" />
-                    </div>}
-
-        
-        </div>
+            
+                    {catData.images_7 && (
+                        <div className="img-container wiki" id="right">
+                        {imageLoading.images_7 && ( <div className="loading-wrapper-2">
+                                    <CircularProgress size={80}  />
+                                </div>)}
+                        <img 
+                        src={catData.images_7} 
+                        alt="" 
+                        onLoad={() => handleImageLoad('images_7')} 
+                        style={{ display: imageLoading.images_7 ? 'none' : 'block' }}
+                        />
+                    </div>
+                    )}
+                    {catData.images_8 && (
+                        <div className="img-container wiki" id="right">
+                        {imageLoading.images_8 && ( <div className="loading-wrapper-2">
+                                    <CircularProgress size={80}  />
+                                </div>)}
+                        <img 
+                        src={catData.images_8} 
+                        alt="" 
+                        onLoad={() => handleImageLoad('images_8')} 
+                        style={{ display: imageLoading.images_8 ? 'none' : 'block' }}
+                        />
+                    </div>
+                    )}
+            
+            </div>
         </div>
             <Bottom></Bottom>
         </div>
