@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ShouldHave.css";
 
 function ShouldHave () {
+
+    const [imageLoading, setImageLoading] = useState({
+        image_1: true,
+        image_2: true,
+        image_3: true
+    })
     return <div className="should-have">
         
         <div className="should-have-1"> 

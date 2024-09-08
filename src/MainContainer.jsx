@@ -98,7 +98,8 @@ function MainContainer () {
                             {mostSearchedCatsLoading.image_1 && (<div className="loading-wrapper"> <CircularProgress sx={80} /> </div>
                                 
                             )}
-                            <img onLoad={() => handleImageLoad('image_1')} src={mostSearchedCats.length > 0 && mostSearchedCats[0].image_url} alt="" />
+                            <img onLoad={() => handleImageLoad('image_1')} src={mostSearchedCats.length > 0 && mostSearchedCats[0].image_url} 
+                            style={{display : mostSearchedCatsLoading.image_1 ? 'none' : ''}} alt="" />
                         </div>
                         <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[0].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[0].name}</p> </a>
                     </div>
@@ -106,18 +107,32 @@ function MainContainer () {
                         {mostSearchedCatsLoading.image_2 && (<div className="loading-wrapper"> <CircularProgress sx={80} /> </div>
                                 
                             )}
-                            <img onLoad={() => handleImageLoad('image_2')} src={mostSearchedCats.length > 0 && mostSearchedCats[1].image_url} alt="" />
+                            <img 
+                            style={{display : mostSearchedCatsLoading.image_2 ? 'none' : ''}}
+                            onLoad={() => handleImageLoad('image_2')} src={mostSearchedCats.length > 0 && mostSearchedCats[1].image_url} alt="" />
                         <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[1].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[1].name}</p> </a>
                         
                     </div>
                   
                 
                     <div className="img-container" id="left">
-                        <img src={mostSearchedCats.length > 0 && mostSearchedCats[2].image_url} alt="" />
+                        {mostSearchedCatsLoading.image_3 && (<div className="loading-wrapper">
+                            <CircularProgress sx={80} />
+                        </div>)}
+                        <img src={mostSearchedCats.length > 0 && mostSearchedCats[2].image_url} 
+                        onLoad={() => handleImageLoad('image_3')}
+                        style={{display: mostSearchedCatsLoading.image_3 ? 'none' : ''}}
+                        alt="" />
                         <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[2].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[2].name}</p> </a>
                     </div>
                     <div className="img-container" id="right">
-                        <img src={mostSearchedCats.length > 0 && mostSearchedCats[3].image_url} alt="" />
+                        {mostSearchedCatsLoading.image_4 && (<div className="loading-wrapper">
+                            <CircularProgress sx={80} />
+                        </div>)}
+                        <img src={mostSearchedCats.length > 0 && mostSearchedCats[3].image_url} 
+                        onLoad={() => handleImageLoad('image_4')}
+                        style={{display: mostSearchedCatsLoading.image_4 ? 'none' : ''}}
+                        alt="" />
                         <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[3].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[3].name}</p> </a>
                     </div>
            
