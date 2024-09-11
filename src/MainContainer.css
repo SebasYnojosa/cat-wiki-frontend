@@ -9,6 +9,14 @@
     height: 75%;
 }
 
+.loading-wrapper-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
 .main-cat-container-img {
     background-image: url("../images/HeroImagelg.png");
     background-size: 100% 100%;
@@ -498,6 +506,15 @@
         width: 7px;
     }   
 
+    .loading-wrapper-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        width: 250px;
+        position: relative;
+      }
+
     .img-container {
         height: 100%;
         width: 100%;
@@ -572,6 +589,16 @@
     #first-image::before {
         top: 80px;
     }
+
+    .loading-wrapper-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 220px;
+        width: 220px;
+        position: relative;
+      }
+
 }
 
 
@@ -580,6 +607,15 @@
         height: 200px;
         width: 200px;
     }
+
+    .loading-wrapper-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+        position: relative;
+      }
 
     #first-image {
         height: 200px;
@@ -610,6 +646,16 @@
         width: 180px;
     }
 
+
+    
+    .loading-wrapper-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 180px;
+        width: 180px;
+        position: relative;
+      }
     #first-image {
         height: 180px;
         width: 180px;
@@ -633,6 +679,16 @@
         height: 160px;
         width: 160px;
     }
+
+    
+    .loading-wrapper-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 160px;
+        width: 160px;
+        position: relative;
+      }
 
     #first-image {
         height: 160px;

@@ -104,7 +104,7 @@ function MainContainer () {
                         <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[0].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[0].name}</p> </a>
                     </div>
                     <div className="img-container" id="right">
-                        {mostSearchedCatsLoading.image_2 && (<div className="loading-wrapper"> <CircularProgress sx={80} /> </div>
+                        {mostSearchedCatsLoading.image_2 && (<div className="loading-wrapper-main"> <CircularProgress sx={80} /> </div>
                                 
                             )}
                             <img 
@@ -116,7 +116,7 @@ function MainContainer () {
                   
                 
                     <div className="img-container" id="left">
-                        {mostSearchedCatsLoading.image_3 && (<div className="loading-wrapper">
+                        {mostSearchedCatsLoading.image_3 && (<div className="loading-wrapper-main">
                             <CircularProgress sx={80} />
                         </div>)}
                         <img src={mostSearchedCats.length > 0 && mostSearchedCats[2].image_url} 
@@ -126,7 +126,7 @@ function MainContainer () {
                         <a href={`/#/cat/${mostSearchedCats.length > 0 && mostSearchedCats[2].name}`}> <p>{mostSearchedCats.length > 0 && mostSearchedCats[2].name}</p> </a>
                     </div>
                     <div className="img-container" id="right">
-                        {mostSearchedCatsLoading.image_4 && (<div className="loading-wrapper">
+                        {mostSearchedCatsLoading.image_4 && (<div className="loading-wrapper-main">
                             <CircularProgress sx={80} />
                         </div>)}
                         <img src={mostSearchedCats.length > 0 && mostSearchedCats[3].image_url} 
